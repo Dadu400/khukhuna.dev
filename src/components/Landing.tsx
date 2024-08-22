@@ -2,6 +2,7 @@ import Logo from "../assets/logo-me.png";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
+import PuppyAnimation from "./PuppyAnimation";
 
 export default function Landing() {
   const typedElement = useRef<HTMLDivElement>(null);
@@ -34,6 +35,7 @@ export default function Landing() {
         </button>
         <ExpandMoreIcon />
       </div>
+      <PuppyAnimation />
     </section>
   );
 };
