@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { LegacyRef } from 'react';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 import type { Engine } from 'tsparticles-engine';
 import type { ISourceOptions } from 'tsparticles-engine';
 
-const ParticlesBackground: React.FC = () => {
+const ParticlesBackground = () => {
     const particlesInit = async (main: Engine) => {
         await loadFull(main);
     };

@@ -32,9 +32,9 @@ function App() {
 
   return (
     <div ref={app}>
-      <section className="panel w-[100%] h-screen blue">
+      {/* <section className="panel w-[100%] h-screen blue">
         <Landing />
-      </section>
+      </section> */}
       <section className="panel">
        <AboutMe />
       </section>
