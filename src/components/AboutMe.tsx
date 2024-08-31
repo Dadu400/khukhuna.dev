@@ -10,8 +10,6 @@ import ParticlesBackground from "./ParticlesBackground";
 gsap.registerPlugin(ScrollTrigger);
 
 function AboutMe() {
-  const containerRef = useRef(null);
-
   const meReference = useRef<HTMLImageElement | null>(null);
   const grandpaReference = useRef(null);
   const grandmaReference = useRef(null);

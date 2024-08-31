@@ -1,4 +1,3 @@
-import React, { LegacyRef } from 'react';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 import type { Engine } from 'tsparticles-engine';
