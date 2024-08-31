@@ -24,7 +24,7 @@ export default function Landing() {
   }, []);
 
   return (
-    <section className="w-screen h-screen bg-[#f44336] flex flex-col justify-between items-center">
+    <div className="w-[100%] h-[100%] bg-[#f44336] flex flex-col justify-between items-center">
       <div className="flex flex-col items-center justify-center gap-8 flex-1">
         <img src={Logo} alt="Daduka Logo" className="w-64" />
         <span className="flex flex-col items-center gap-4 font-montserrat text-3xl text-white font-light w-full h-32" ref={typedElement}></span>
@@ -36,6 +36,6 @@ export default function Landing() {
         </div>
       </div>
       <PuppyAnimation />
-    </section>
+    </div>
   );
 }
