@@ -3,9 +3,11 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import PuppyAnimation from "./PuppyAnimation";
+import gsap from "gsap";
 
 export default function Landing() {
   const typedElement = useRef<HTMLDivElement>(null);
+  const hearMoreHint = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const typed = new Typed(typedElement.current!, {
@@ -16,6 +18,12 @@ export default function Landing() {
       backSpeed: 50,
       loop: false,
       showCursor: false,
+      onComplete: () => {
+        gsap.fromTo(hearMoreHint.current,
+          { opacity: 0 },
+          { opacity: 1, duration: 2, ease: "back.out(1.7)" }
+        );
+      }
     });
 
     return () => {
@@ -28,7 +36,7 @@ export default function Landing() {
       <div className="flex flex-col items-center justify-center gap-8 flex-1">
         <img src={Logo} alt="Daduka Logo" className="w-64" />
         <span className="flex flex-col items-center gap-4 font-montserrat text-3xl text-white font-light w-full h-32" ref={typedElement}></span>
-        <div className="flex flex-col items-center gap-2 text-white animate-bounce">
+        <div className="flex flex-col items-center gap-2 text-white opacity-0" ref={hearMoreHint}>
           <button className="font-opensans text-xl uppercase font-light">
             Scroll down to <span className="font-medium">hear my story</span>
           </button>

@@ -37,7 +37,7 @@ function AboutMe() {
     )
     .fromTo([grandpaReference.current, grandmaReference.current],
       { opacity: 0 },
-      { opacity: 0.7, ease: "back.out(1.7)" },
+      { opacity: 1 },
       "<"
     )
     .fromTo(spansRef.current[2], 
@@ -68,17 +68,17 @@ function AboutMe() {
             ref={grandmaReference}
             src={Grandma}
             alt="Grandma"
-            className="w-52 h-48 z-0 opacity-85 absolute left-48 bottom-16  opacity-0"
+            className="w-52 h-48 z-0 opacity-85 absolute left-48 bottom-16 opacity-0"
           />
         </div>
-        <h1 className="font-montserrat text-2xl text-white font-light text-center">
+        <h1 className="font-montserrat text-2xl text-white font-normal text-center">
           <span ref={(el) => (spansRef.current[0] = el)} className="block mb-2">
-            After Graduating a High School
+            After Graduating from High School
           </span>
-          <span ref={(el) => (spansRef.current[1] = el)} className="block mb-2">
+          <span ref={(el) => (spansRef.current[1] = el)} className="block mb-6">
             My Family and I decided that I would become a
           </span>
-          <span ref={(el) => (spansRef.current[2] = el)} className="block font-semibold uppercase tracking-wider">
+          <span ref={(el) => (spansRef.current[2] = el)} className="block font-bold text-3xl uppercase tracking-[.25em]">
             doctor
           </span>
         </h1>
