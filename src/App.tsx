@@ -21,20 +21,15 @@ function App() {
           end: "+=200%",
         });
       });
-      ScrollTrigger.create({
-        start: 0,
-        end: "max",
-        snap: 1 / (panels.length - 1),
-      });
     }, app);
     return () => ctx.revert();
   }, []);
 
   return (
     <div ref={app}>
-      {/* <section className="panel w-[100%] h-screen blue">
+      <section className="panel w-[100%] h-screen blue">
         <Landing />
-      </section> */}
+      </section>
       <section className="panel">
        <AboutMe />
       </section>
